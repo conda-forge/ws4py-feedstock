@@ -11,6 +11,18 @@ Summary: WebSocket client and server library for Python 2, 3, and PyPy
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ws4py-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ws4py-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/ws4py-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ws4py-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ws4py-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ws4py-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ws4py/badges/version.svg)](https://anaconda.org/conda-forge/ws4py)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ws4py/badges/downloads.svg)](https://anaconda.org/conda-forge/ws4py)
+
 Installing ws4py
 ================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `ws4py` available on your platform
 ```
 conda search ws4py --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ws4py-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ws4py-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ws4py-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ws4py-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ws4py-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ws4py-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ws4py/badges/version.svg)](https://anaconda.org/conda-forge/ws4py)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ws4py/badges/downloads.svg)](https://anaconda.org/conda-forge/ws4py)
 
 
 Updating ws4py-feedstock

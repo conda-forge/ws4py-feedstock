@@ -1,17 +1,21 @@
-{% set version = "0.3.2" %}
+{% set name = "ws4py" %}
+{% set version = "0.3.5" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "c4cc4a872027f6a6006a6142a38eb6d65c2ece29a4cefac98dd20a48c34ec7a9" %}
+{% set build_num = "0" %}
 
 package:
-  name: ws4py
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: ws4py-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/w/ws4py/ws4py-{{ version }}.tar.gz
-  sha256: 48a4e005496a60081f74ca130ce55603ff87e1507483535acf902b94761bda8b
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  {{ hash_type }}: {{ hash_val }}
 
 build:
-
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -31,7 +35,11 @@ test:
 about:
   home: https://github.com/Lawouach/WebSocket-for-Python
   license: BSD 3-Clause
+  license_family: BSD
+  
   summary: 'WebSocket client and server library for Python 2, 3, and PyPy'
+  dev_url: https://github.com/Lawouach/WebSocket-for-Python
+  doc_url: https://ws4py.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
