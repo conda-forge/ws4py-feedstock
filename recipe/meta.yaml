@@ -1,9 +1,9 @@
 {% set name = "ws4py" %}
-{% set version = "0.3.5" %}
+{% set version = "0.4.2" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "c4cc4a872027f6a6006a6142a38eb6d65c2ece29a4cefac98dd20a48c34ec7a9" %}
-{% set build_num = "0" %}
+{% set hash = "7ac69ce3e6ec6917a5d678b65f0a18e244a4dc670db6414bc0271b3f4911237f" %}
+{% set build = "0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,10 +12,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -34,9 +34,10 @@ test:
 
 about:
   home: https://github.com/Lawouach/WebSocket-for-Python
+  # No MANIFEST - see https://github.com/Lawouach/WebSocket-for-Python/pull/215
+  license_file:  {{ RECIPE_DIR }}/LICENSE
   license: BSD 3-Clause
   license_family: BSD
-  
   summary: 'WebSocket client and server library for Python 2, 3, and PyPy'
   dev_url: https://github.com/Lawouach/WebSocket-for-Python
   doc_url: https://ws4py.readthedocs.io/en/latest/
