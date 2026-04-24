@@ -1,8 +1,7 @@
 {% set name = "ws4py" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "29d073d7f2e006373e6a848b1d00951a1107eb81f3742952be905429dc5a5483" %}
+{% set hash = "9f87b19b773f0a0744a38f3afa36a803286dd3197f0bb35d9b75293ec7002d19" %}
 
 package:
   name: {{ name|lower }}
@@ -11,15 +10,15 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
-  build:
+  host:
     - python
     - pip
 
@@ -34,7 +33,7 @@ test:
 
 about:
   home: https://github.com/Lawouach/WebSocket-for-Python
-  license_file:  LICENSE
+  license_file: LICENSE
   license: BSD 3-Clause
   license_family: BSD
   summary: 'WebSocket client and server library for Python 2, 3, and PyPy'
